@@ -38,7 +38,7 @@ public class DiscordEventListener extends ListenerAdapter {
 
                 server.getCommandManager().execute(results, command);
             } else if(e.getMessage().getContentRaw().startsWith("!whitelist")) {
-                String command = e.getMessage().getContentRaw().replace("!whitelist ", "whitelist add");
+                String command = e.getMessage().getContentRaw().replace("!whitelist ", "whitelist add ");
 
                 ServerCommandSource source = getDiscordCommandSource();
                 ParseResults<ServerCommandSource> results = server.getCommandManager().getDispatcher().parse(command, source);
